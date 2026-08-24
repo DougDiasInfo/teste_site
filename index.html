@@ -1,13 +1,399 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="DM Informática — portal de tecnologia, serviços, notícias, downloads e suporte."><title>DM Informática | Portal de Tecnologia</title><link rel="preconnect" href="https://cdnjs.cloudflare.com"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/menu.css"><link rel="stylesheet" href="css/portal.css"><link rel="icon" href="img/logo.png"></head><body><canvas id="particlesCanvas"></canvas>
-<div class="brand-corner"><img src="img/logo.png" class="logo" alt="DM Informática"><span class="status-dot"></span></div>
-<nav class="floating-dock" aria-label="Navegação principal"><a href="index.html" class="dock-item"><i class="fa-solid fa-house"></i><span class="dock-text">Home</span></a><a href="programas.html" class="dock-item"><i class="fa-solid fa-server"></i><span class="dock-text">Serviços</span></a><a href="downloads.html" class="dock-item"><i class="fa-solid fa-download"></i><span class="dock-text">Downloads</span></a><a href="videos.html" class="dock-item"><i class="fa-solid fa-play"></i><span class="dock-text">Vídeos</span></a><a href="contato.html" class="dock-item"><i class="fa-solid fa-headset"></i><span class="dock-text">Suporte</span></a></nav>
-<main class="page"><div class="portal-topbar"><div class="portal-brand"><img src="img/logo.png" alt="DM"><span>Portal DM</span><span class="portal-status"><i class="fa-solid fa-circle"></i> Online</span></div><div class="global-search"><i class="fa-solid fa-magnifying-glass"></i><input id="globalSearch" type="search" placeholder="Buscar serviços, notícias, downloads..." autocomplete="off"><kbd>⌘ K</kbd><div id="searchResults" class="search-results"></div></div></div>
-<section id="portalHero" class="portal-hero reveal"></section>
-<div class="portal-dashboard"><div id="portalStats" class="portal-stats reveal"></div><div class="portal-shortcuts reveal"><a href="programas.html"><i class="fa-solid fa-server"></i> Serviços</a><a href="downloads.html"><i class="fa-solid fa-download"></i> Downloads</a><a href="videos.html"><i class="fa-solid fa-play"></i> Tutoriais</a><a href="contato.html"><i class="fa-solid fa-headset"></i> Suporte</a></div></div>
-<div class="portal-marquee"><span><i class="fa-solid fa-bolt"></i> Tecnologia & suporte</span><span><i class="fa-solid fa-shield-halved"></i> Segurança</span><span><i class="fa-solid fa-microchip"></i> Hardware</span><span><i class="fa-solid fa-network-wired"></i> Infraestrutura</span><span><i class="fa-solid fa-robot"></i> Automação & IA</span></div>
-<section class="portal-section reveal"><div class="portal-section-head"><div><h2><i class="fa-solid fa-newspaper"></i> Notícias & <span>insights</span></h2><p>Conteúdo recente da DM Informática</p></div><a class="link-more" href="#">Ver tudo →</a></div><div id="portalNews" class="portal-grid"></div></section>
-<section class="portal-section reveal"><div class="portal-section-head"><div><h2><i class="fa-solid fa-box-archive"></i> Downloads em <span>destaque</span></h2><p>Versões organizadas e atualizadas</p></div><a class="link-more" href="downloads.html">Central de downloads →</a></div><div id="portalDownloads" class="downloads-grid"></div></section>
-<section class="portal-section reveal"><div class="portal-section-head"><div><h2><i class="fa-solid fa-compass"></i> Explore o <span>portal</span></h2><p>Encontre rapidamente o que precisa</p></div></div><div class="cards-grid"><a class="card-item" href="programas.html"><div class="card-header"><span class="card-icon-glow"><i class="fa-solid fa-server"></i></span><span class="pulse-green">ATIVO</span></div><h3>Soluções de TI</h3><p>Infraestrutura, sistemas, manutenção e suporte.</p></a><a class="card-item" href="videos.html"><div class="card-header"><span class="card-icon-glow"><i class="fa-solid fa-circle-play"></i></span><span class="tag-counter">CATÁLOGO</span></div><h3>Vídeos & tutoriais</h3><p>Conteúdo para aprender, configurar e resolver.</p></a><a class="card-item" href="contato.html"><div class="card-header"><span class="card-icon-glow"><i class="fa-solid fa-headset"></i></span><span class="pulse-orange">RÁPIDO</span></div><h3>Suporte técnico</h3><p>Fale com a DM e solicite atendimento.</p></a><a class="card-item" href="admin.html"><div class="card-header"><span class="card-icon-glow"><i class="fa-solid fa-sliders"></i></span><span class="tag-version">ADMIN</span></div><h3>Gerenciar portal</h3><p>Edite notícias e downloads sem alterar o código.</p></a></div></section>
-</main><a class="whatsapp-fab" href="https://wa.me/5531999291567" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a><button id="backTop" class="back-top" aria-label="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></button>
-<footer class="site-footer"><span>© 2026 <strong>DM Informática</strong> · Portal de Tecnologia</span><span>Conteúdo gerenciado pelo painel administrativo</span></footer>
-<script src="js/script.js"></script><script src="js/menu.js"></script><script src="js/portal.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="DM Informática — portal de tecnologia, serviços, notícias, downloads e suporte." />
+  <title>DM Informática | Portal de Tecnologia</title>
+
+  <!-- Font Awesome -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- CSS do Projeto -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+  <link rel="stylesheet" href="css/portal.css" />
+  <link rel="stylesheet" href="css/micro-matrix.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/logo.png" />
+</head>
+<body>
+
+  <!-- ============================================================
+  PARTÍCULAS (plano de fundo)
+  ============================================================ -->
+  <canvas id="particlesCanvas"></canvas>
+
+  <!-- ============================================================
+  TOPO: LOGO + STATUS
+  ============================================================ -->
+  <div class="brand-corner">
+    <img src="img/logo.png" class="logo" alt="DM Informática" />
+    <span class="status-dot"></span>
+  </div>
+
+  <!-- ============================================================
+  BARRA DE IMAGENS (exclusiva desktop)
+  ============================================================ -->
+  <section class="section-container desktop-only-showcase">
+    <div class="section-header"><br /></div>
+
+    <!-- Relógio -->
+    <div class="clock2">
+      <div class="clock">
+        <div class="time" id="time">12:00:00</div>
+      </div>
+    </div>
+
+    <!-- Grid de cards com flip -->
+    <div class="micro-matrix-grid">
+
+      <!-- Card 1 – HD -->
+      <div class="micro-card">
+        <div class="micro-card-flipper">
+          <div class="micro-card-front">
+            <img src="img/showcase/hd.jpg" alt="Hard Drive" class="card-bg" />
+            <div class="card-overlay-gradient"></div>
+            <div class="micro-card-header">
+              <span class="micro-icon"><i class="fa-solid fa-database"></i></span>
+            </div>
+            <div class="micro-card-body">
+              <h4>Manutenção HD</h4>
+              <span class="micro-tag">Storage SAN</span>
+            </div>
+          </div>
+          <div class="micro-card-back">
+            <img src="img/showcase/dm.png" alt="Status Storage" class="card-bg" />
+            <div class="micro-back-info">
+              <h5>Storage RAID 10</h5>
+              <p>Recuperação de dados e prevenção de falhas em disco.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 – Redes -->
+      <div class="micro-card">
+        <div class="micro-card-flipper">
+          <div class="micro-card-front">
+            <img src="img/showcase/rede.png" alt="Redes" class="card-bg" />
+            <div class="card-overlay-gradient"></div>
+            <div class="micro-card-header">
+              <span class="micro-icon"><i class="fa-solid fa-network-wired"></i></span>
+            </div>
+            <div class="micro-card-body">
+              <h4>Redes & Wi-Fi</h4>
+              <span class="micro-tag">VLANs UTI</span>
+            </div>
+          </div>
+          <div class="micro-card-back">
+            <img src="img/showcase/dm.png" alt="Status Rede" class="card-bg" />
+            <div class="micro-back-info">
+              <h5>Fibra & Switch</h5>
+              <p>Isolamento de tráfego crítico para PACS e PEP.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 – Sistemas -->
+      <div class="micro-card">
+        <div class="micro-card-flipper">
+          <div class="micro-card-front">
+            <img src="img/showcase/offices.jpg" alt="Sistemas" class="card-bg" />
+            <div class="card-overlay-gradient"></div>
+            <div class="micro-card-header">
+              <span class="micro-icon"><i class="fa-solid fa-laptop-code"></i></span>
+            </div>
+            <div class="micro-card-body">
+              <h4>Ótimos Programas</h4>
+              <span class="micro-tag">Sistemas ERP</span>
+            </div>
+          </div>
+          <div class="micro-card-back">
+            <img src="img/showcase/dm.png" alt="Status ERP" class="card-bg" />
+            <div class="micro-back-info">
+              <h5>Homologação ERP</h5>
+              <p>Instalação e otimização de bancos Oracle/SQL.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 – Estações TI -->
+      <div class="micro-card">
+        <div class="micro-card-flipper">
+          <div class="micro-card-front">
+            <img src="img/showcase/gamer.jpg" alt="Computadores" class="card-bg" />
+            <div class="card-overlay-gradient"></div>
+            <div class="micro-card-header">
+              <span class="micro-icon"><i class="fa-solid fa-desktop"></i></span>
+            </div>
+            <div class="micro-card-body">
+              <h4>Estações TI</h4>
+              <span class="micro-tag">Workstations</span>
+            </div>
+          </div>
+          <div class="micro-card-back">
+            <img src="img/showcase/dm.png" alt="Status Workstation" class="card-bg" />
+            <div class="micro-back-info">
+              <h5>Terminais Clínicos</h5>
+              <p>Manutenção preventiva de PCs de recepção e triagem.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 – Bancada Testes -->
+      <div class="micro-card">
+        <div class="micro-card-flipper">
+          <div class="micro-card-front">
+            <img src="img/showcase/reparo.png" alt="Bancada TI" class="card-bg" />
+            <div class="card-overlay-gradient"></div>
+            <div class="micro-card-header">
+              <span class="micro-icon"><i class="fa-solid fa-microchip"></i></span>
+            </div>
+            <div class="micro-card-body">
+              <h4>Bancada Testes</h4>
+              <span class="micro-tag">Reparos</span>
+            </div>
+          </div>
+          <div class="micro-card-back">
+            <img src="img/showcase/dm.png" alt="Status Suporte" class="card-bg" />
+            <div class="micro-back-info">
+              <h5>Lab de Eletrônica</h5>
+              <p>Diagnóstico de placas, fontes e nobreaks hospitalares.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 – Suporte Geral -->
+      <div class="micro-card">
+        <div class="micro-card-flipper">
+          <div class="micro-card-front">
+            <img src="img/showcase/manutencao.jpg" alt="Periféricos" class="card-bg" />
+            <div class="card-overlay-gradient"></div>
+            <div class="micro-card-header">
+              <span class="micro-icon"><i class="fa-solid fa-headset"></i></span>
+            </div>
+            <div class="micro-card-body">
+              <h4>Suporte Geral</h4>
+              <span class="micro-tag">24/7 Ativo</span>
+            </div>
+          </div>
+          <div class="micro-card-back">
+            <img src="img/showcase/dm.png" alt="Status Chamados" class="card-bg" />
+            <div class="micro-back-info">
+              <h5>Helpdesk Remoto</h5>
+              <p>Atendimento imediato para abertura de chamados técnicos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 – repetido (ajuste conforme necessário) -->
+      <div class="micro-card">
+        <div class="micro-card-flipper">
+          <div class="micro-card-front">
+            <img src="img/showcase/hd.jpg" alt="Hard Drive" class="card-bg" />
+            <div class="card-overlay-gradient"></div>
+            <div class="micro-card-header">
+              <span class="micro-icon"><i class="fa-solid fa-database"></i></span>
+            </div>
+            <div class="micro-card-body">
+              <h4>Manutenção HD</h4>
+              <span class="micro-tag">Storage SAN</span>
+            </div>
+          </div>
+          <div class="micro-card-back">
+            <img src="img/showcase/dm.png" alt="Status Storage" class="card-bg" />
+            <div class="micro-back-info">
+              <h5>Storage RAID 10</h5>
+              <p>Recuperação de dados e prevenção de falhas em disco.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.micro-matrix-grid -->
+  </section>
+
+  <!-- ============================================================
+  NAVEGAÇÃO PRINCIPAL (DOCK flutuante)
+  ============================================================ -->
+  <nav class="floating-dock" aria-label="Navegação principal">
+    <a href="index.html" class="dock-item">
+      <i class="fa-solid fa-house"></i>
+      <span class="dock-text">Home</span>
+    </a>
+    <a href="programas.html" class="dock-item">
+      <i class="fa-solid fa-server"></i>
+      <span class="dock-text">Serviços</span>
+    </a>
+    <a href="downloads.html" class="dock-item">
+      <i class="fa-solid fa-download"></i>
+      <span class="dock-text">Downloads</span>
+    </a>
+    <a href="videos.html" class="dock-item">
+      <i class="fa-solid fa-play"></i>
+      <span class="dock-text">Vídeos</span>
+    </a>
+    <a href="contato.html" class="dock-item">
+      <i class="fa-solid fa-headset"></i>
+      <span class="dock-text">Suporte</span>
+    </a>
+  </nav>
+
+  <!-- ============================================================
+  CONTEÚDO PRINCIPAL
+  ============================================================ -->
+  <main class="page">
+
+    <!-- Barra superior (marca + busca) -->
+    <div class="portal-topbar">
+      <div class="portal-brand">
+        <img src="img/logo.png" alt="DM" />
+        <span>Portal DM</span>
+        <span class="portal-status">
+          <i class="fa-solid fa-circle"></i> Online
+        </span>
+      </div>
+      <div class="global-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="globalSearch" type="search" placeholder="Buscar serviços, notícias, downloads..." autocomplete="off" />
+        <kbd>⌘ K</kbd>
+        <div id="searchResults" class="search-results"></div>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section id="portalHero" class="portal-hero reveal"></section>
+
+    <!-- Dashboard: estatísticas + atalhos -->
+    <div class="portal-dashboard">
+      <div id="portalStats" class="portal-stats reveal"></div>
+      <div class="portal-shortcuts reveal">
+        <a href="programas.html"><i class="fa-solid fa-server"></i> Serviços</a>
+        <a href="downloads.html"><i class="fa-solid fa-download"></i> Downloads</a>
+        <a href="videos.html"><i class="fa-solid fa-play"></i> Tutoriais</a>
+        <a href="contato.html"><i class="fa-solid fa-headset"></i> Suporte</a>
+      </div>
+    </div>
+
+    <!-- Marquee -->
+    <div class="portal-marquee">
+      <span><i class="fa-solid fa-bolt"></i> Tecnologia & suporte</span>
+      <span><i class="fa-solid fa-shield-halved"></i> Segurança</span>
+      <span><i class="fa-solid fa-microchip"></i> Hardware</span>
+      <span><i class="fa-solid fa-network-wired"></i> Infraestrutura</span>
+      <span><i class="fa-solid fa-robot"></i> Automação & IA</span>
+    </div>
+
+    <!-- Seção: Notícias -->
+    <section class="portal-section reveal">
+      <div class="portal-section-head">
+        <div>
+          <h2><i class="fa-solid fa-newspaper"></i> Notícias & <span>insights</span></h2>
+          <p>Conteúdo recente da DM Informática</p>
+        </div>
+        <a class="link-more" href="#">Ver tudo →</a>
+      </div>
+      <div id="portalNews" class="portal-grid"></div>
+    </section>
+
+    <!-- Seção: Downloads em destaque -->
+    <section class="portal-section reveal">
+      <div class="portal-section-head">
+        <div>
+          <h2><i class="fa-solid fa-box-archive"></i> Downloads em <span>destaque</span></h2>
+          <p>Versões organizadas e atualizadas</p>
+        </div>
+        <a class="link-more" href="downloads.html">Central de downloads →</a>
+      </div>
+      <div id="portalDownloads" class="downloads-grid"></div>
+    </section>
+
+    <!-- Seção: Explore o portal -->
+    <section class="portal-section reveal">
+      <div class="portal-section-head">
+        <div>
+          <h2><i class="fa-solid fa-compass"></i> Explore o <span>portal</span></h2>
+          <p>Encontre rapidamente o que precisa</p>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <a class="card-item" href="programas.html">
+          <div class="card-header">
+            <span class="card-icon-glow"><i class="fa-solid fa-server"></i></span>
+            <span class="pulse-green">ATIVO</span>
+          </div>
+          <h3>Soluções de TI</h3>
+          <p>Infraestrutura, sistemas, manutenção e suporte.</p>
+        </a>
+
+        <a class="card-item" href="videos.html">
+          <div class="card-header">
+            <span class="card-icon-glow"><i class="fa-solid fa-circle-play"></i></span>
+            <span class="tag-counter">CATÁLOGO</span>
+          </div>
+          <h3>Vídeos & tutoriais</h3>
+          <p>Conteúdo para aprender, configurar e resolver.</p>
+        </a>
+
+        <a class="card-item" href="contato.html">
+          <div class="card-header">
+            <span class="card-icon-glow"><i class="fa-solid fa-headset"></i></span>
+            <span class="pulse-orange">RÁPIDO</span>
+          </div>
+          <h3>Suporte técnico</h3>
+          <p>Fale com a DM e solicite atendimento.</p>
+        </a>
+
+        <a class="card-item" href="admin.html">
+          <div class="card-header">
+            <span class="card-icon-glow"><i class="fa-solid fa-sliders"></i></span>
+            <span class="tag-version">ADMIN</span>
+          </div>
+          <h3>Gerenciar portal</h3>
+          <p>Edite notícias e downloads sem alterar o código.</p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+  WHATSAPP FLUTUANTE
+  ============================================================ -->
+  <a class="whatsapp-fab" href="https://wa.me/5531999291567" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ============================================================
+  BOTÃO VOLTAR AO TOPO
+  ============================================================ -->
+  <button id="backTop" class="back-top" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ============================================================
+  RODAPÉ
+  ============================================================ -->
+  <footer class="site-footer">
+    <span>© 2026 <strong>DM Informática</strong> · Portal de Tecnologia</span>
+    <span>Conteúdo gerenciado pelo painel administrativo</span>
+  </footer>
+
+  <!-- ============================================================
+  SCRIPTS
+  ============================================================ -->
+  <script src="js/script.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/portal.js"></script>
+
+</body>
+</html>
