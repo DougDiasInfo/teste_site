@@ -1,0 +1,20 @@
+{
+  "site": {
+    "name": "DM Informática",
+    "eyebrow": "Portal de Tecnologia",
+    "headline": "Tecnologia que simplifica.",
+    "description": "Serviços, notícias, downloads, tutoriais e suporte técnico em um único lugar.",
+    "status": "Sistemas operacionais",
+    "whatsapp": "5531999291567"
+  },
+  "news": [
+    {"id":"n1","title":"IA na TI: onde a automação realmente gera valor","category":"Inovação","date":"2026-08-21","summary":"Veja como automação, observabilidade e IA podem reduzir tarefas repetitivas e acelerar o suporte.","image":"img/showcase/dm_.png","link":"#"},
+    {"id":"n2","title":"Checklist de segurança para computadores corporativos","category":"Segurança","date":"2026-08-18","summary":"Atualizações, credenciais, backups e boas práticas para reduzir riscos no dia a dia.","image":"img/showcase/rede.png","link":"#"},
+    {"id":"n3","title":"Manutenção preventiva: menos falhas e mais desempenho","category":"Hardware","date":"2026-08-15","summary":"Identifique aquecimento, armazenamento degradado e outros sinais antes que virem indisponibilidade.","image":"img/showcase/manutencao.jpg","link":"#"}
+  ],
+  "downloads": [
+    {"id":"d1","name":"DM Suporte Tools","version":"2.4.0","date":"2026-08-20","category":"Suporte","description":"Pacote de utilitários para diagnóstico e atendimento técnico.","size":"18 MB","url":"#","featured":true},
+    {"id":"d2","name":"DM Network Toolkit","version":"1.8.2","date":"2026-08-12","category":"Redes","description":"Ferramentas para testes básicos de conectividade e diagnóstico de rede.","size":"12 MB","url":"#","featured":true},
+    {"id":"d3","name":"DM Maintenance Pack","version":"3.1.0","date":"2026-07-30","category":"Manutenção","description":"Coleção de utilitários para manutenção preventiva de estações Windows.","size":"35 MB","url":"#","featured":false}
+  ]
+}

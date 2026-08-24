@@ -1,0 +1,63 @@
+{
+  "services": [
+    {
+      "icon": "fa-server",
+      "title": "Sistemas & Integrações",
+      "desc": "Implantação, suporte e integração de sistemas para ambientes corporativos e hospitalares.",
+      "tag": "Tecnologia"
+    },
+    {
+      "icon": "fa-network-wired",
+      "title": "Redes & Infraestrutura",
+      "desc": "Diagnóstico, Wi‑Fi, cabeamento, switches, servidores e otimização de conectividade.",
+      "tag": "Infraestrutura"
+    },
+    {
+      "icon": "fa-screwdriver-wrench",
+      "title": "Manutenção de Computadores",
+      "desc": "Manutenção preventiva e corretiva, limpeza, upgrades e diagnóstico de hardware.",
+      "tag": "Hardware"
+    },
+    {
+      "icon": "fa-shield-halved",
+      "title": "Segurança & Backup",
+      "desc": "Boas práticas, proteção de endpoints, organização de backups e continuidade operacional.",
+      "tag": "Segurança"
+    },
+    {
+      "icon": "fa-microchip",
+      "title": "Diagnóstico Técnico",
+      "desc": "Análise de falhas em placas, fontes, armazenamento, periféricos e estações de trabalho.",
+      "tag": "Laboratório"
+    },
+    {
+      "icon": "fa-headset",
+      "title": "Suporte Remoto",
+      "desc": "Atendimento ágil para resolver problemas de software, configuração e acesso.",
+      "tag": "Suporte"
+    }
+  ],
+  "downloads": [
+    {
+      "icon": "fa-file-arrow-down",
+      "title": "Central de Downloads",
+      "desc": "Área preparada para drivers, utilitários, instaladores e arquivos homologados.",
+      "tag": "Arquivos",
+      "action": "Em breve"
+    },
+    {
+      "icon": "fa-shield-halved",
+      "title": "Ferramentas de Segurança",
+      "desc": "Utilitários selecionados para diagnóstico e manutenção segura dos equipamentos.",
+      "tag": "Segurança",
+      "action": "Consultar"
+    },
+    {
+      "icon": "fa-wand-magic-sparkles",
+      "title": "Utilitários de Suporte",
+      "desc": "Coleção organizada de ferramentas para uso técnico e manutenção.",
+      "tag": "Suporte",
+      "action": "Consultar"
+    }
+  ]
+}

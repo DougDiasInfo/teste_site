@@ -1,0 +1,31 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "title": "IA na TI: como automação pode reduzir tarefas repetitivas",
+      "category": "Inovação",
+      "date": "21 de Agosto, 2026",
+      "image": "img/showcase/dm_.png",
+      "summary": "Automação, observabilidade e inteligência artificial estão mudando a forma de diagnosticar e operar ambientes digitais.",
+      "link": "#"
+    },
+    {
+      "id": "2",
+      "title": "Boas práticas para proteger computadores conectados à rede",
+      "category": "Segurança",
+      "date": "18 de Agosto, 2026",
+      "image": "img/showcase/rede.png",
+      "summary": "Cuidados simples com atualizações, credenciais, backups e dispositivos removíveis ajudam a reduzir riscos.",
+      "link": "#"
+    },
+    {
+      "id": "3",
+      "title": "Manutenção preventiva: pequenos cuidados, menos paradas",
+      "category": "Hardware",
+      "date": "15 de Agosto, 2026",
+      "image": "img/showcase/manutencao.jpg",
+      "summary": "Uma rotina preventiva ajuda a identificar aquecimento, armazenamento degradado e outros sinais antes de uma falha.",
+      "link": "#"
+    }
+  ]
+}
