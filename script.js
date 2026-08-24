@@ -1,0 +1,5 @@
+document.addEventListener('DOMContentLoaded',()=>{
+ const c=document.getElementById('particlesCanvas');if(!c)return;const x=c.getContext('2d');let p=[];
+ const resize=()=>{c.width=innerWidth*devicePixelRatio;c.height=innerHeight*devicePixelRatio;x.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);p=Array.from({length:innerWidth<700?28:55},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25}))};resize();addEventListener('resize',resize);
+ const loop=()=>{x.clearRect(0,0,innerWidth,innerHeight);p.forEach(a=>{a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>innerWidth)a.vx*=-1;if(a.y<0||a.y>innerHeight)a.vy*=-1;x.fillStyle='rgba(255,107,26,.55)';x.beginPath();x.arc(a.x,a.y,1.2,0,7);x.fill()});for(let i=0;i<p.length;i++)for(let j=i+1;j<p.length;j++){let dx=p[i].x-p[j].x,dy=p[i].y-p[j].y,d=Math.hypot(dx,dy);if(d<110){x.strokeStyle=`rgba(255,107,26,${.12*(1-d/110)})`;x.beginPath();x.moveTo(p[i].x,p[i].y);x.lineTo(p[j].x,p[j].y);x.stroke()}}requestAnimationFrame(loop)};loop();
+});
