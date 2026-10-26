@@ -1,0 +1,372 @@
+/* ==========================================================================
+   HEALTH-TECH VIDEO HUB STYLES (videos.css)
+   ========================================================================== */
+
+/* BANNER DE VÍDEOS */
+.video-hero-glass {
+    background: rgba(18, 18, 18, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    border-radius: 24px;
+    padding: 35px 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.video-hero-glass h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.video-hero-glass h1 span {
+    color: var(--orange-primary, #ff6b1a);
+    text-shadow: 0 0 20px rgba(255, 107, 26, 0.4);
+}
+
+.video-hero-glass p {
+    color: #a0a0a0;
+    font-size: 1rem;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* CONTAINER DE FILTROS E PESQUISA */
+.filter-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    width: 100%;
+}
+
+.input-search-box {
+    position: relative;
+    flex: 2;
+    min-width: 280px;
+}
+
+.input-search-box .search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--orange-primary, #ff6b1a);
+    font-size: 1rem;
+}
+
+.filter-wrapper .busca {
+    width: 100%;
+    background: rgba(18, 18, 18, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    padding: 15px 20px 15px 48px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.filter-wrapper .busca:focus {
+    border-color: var(--orange-primary, #ff6b1a);
+    box-shadow: 0 0 20px rgba(255, 107, 26, 0.35);
+}
+
+/* SELECT ESTILIZADO */
+.select-dark {
+    background: rgba(18, 18, 18, 0.85);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 220px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ff6b1a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    background-size: 16px;
+    padding-right: 48px;
+    backdrop-filter: blur(10px);
+}
+
+.select-dark:focus {
+    border-color: var(--orange-primary, #ff6b1a);
+    box-shadow: 0 0 20px rgba(255, 107, 26, 0.35);
+}
+
+.select-dark option {
+    background: #111111;
+    color: #ffffff;
+}
+
+/* CONTADOR DE VÍDEOS */
+.contador {
+    text-align: center;
+    color: #888888;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* GRID E CARDS DE VÍDEO */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 25px;
+}
+
+.video-card {
+    background: rgba(18, 18, 18, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--orange-primary, #ff6b1a);
+    box-shadow: 0 12px 30px rgba(255, 107, 26, 0.3);
+}
+
+.video-thumb-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-thumb-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.video-card:hover .video-thumb-wrapper img {
+    transform: scale(1.06);
+}
+
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.play-overlay i {
+    font-size: 2.5rem;
+    color: #ffffff;
+    filter: drop-shadow(0 0 10px rgba(255, 107, 26, 0.8));
+}
+
+.video-card:hover .play-overlay {
+    opacity: 1;
+}
+
+.video-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.video-category {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: var(--orange-primary, #ff6b1a);
+    background: rgba(255, 107, 26, 0.12);
+    border: 1px solid rgba(255, 107, 26, 0.25);
+    padding: 4px 10px;
+    border-radius: 12px;
+    align-self: flex-start;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.video-info h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.video-info p {
+    font-size: 0.85rem;
+    color: #a0a0a0;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.btn-watch {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--orange-primary, #ff6b1a);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 12px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    min-height: 44px;
+}
+
+.btn-watch:hover {
+    background: #ff8c42;
+    box-shadow: 0 0 15px rgba(255, 107, 26, 0.5);
+}
+
+/* ==========================================================================
+   MODAL LIGHTBOX GLASSMorphic (videos.css)
+   ========================================================================== */
+
+.video-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.video-modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.video-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    background: rgba(18, 18, 18, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 107, 26, 0.2);
+    transform: scale(0.92);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.video-modal-overlay.active .video-modal-content {
+    transform: scale(1);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.modal-close-btn:hover {
+    background: var(--orange-primary, #ff6b1a);
+    border-color: var(--orange-primary, #ff6b1a);
+    transform: rotate(90deg);
+}
+
+/* BOX RESPONSIVO 16:9 DO IFRAME */
+.iframe-responsive-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000000;
+}
+
+.iframe-responsive-box iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.modal-video-info {
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #111111;
+}
+
+.modal-video-info h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Ajuste do ponteiro e hover dos cards */
+.video-thumb-wrapper, .btn-watch {
+    cursor: pointer;
+}
+
+/* MOBILE ADAPTATION */
+@media (max-width: 768px) {
+    .video-hero-glass {
+        padding: 25px 15px;
+    }
+
+    .video-hero-glass h1 {
+        font-size: 2rem;
+    }
+
+    .filter-wrapper {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .input-search-box, 
+    .select-dark {
+        width: 100%;
+        min-width: 100%;
+        font-size: 16px; /* Evita zoom automático no Safari iOS */
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
