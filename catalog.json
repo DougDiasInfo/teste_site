@@ -1,0 +1,10 @@
+{
+  "site": {
+    "name": "DM Informática",
+    "description": "Tecnologia, ferramentas, tutoriais e suporte em um só lugar.",
+    "whatsapp": "5531999291567"
+  },
+  "programs": [],
+  "downloads": [],
+  "instructions": "Edite este arquivo para cadastrar sistemas e downloads. Para vídeos, edite ../dados/videos.json; para artigos, ../config/home-content.json."
+}
