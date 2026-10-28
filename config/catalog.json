@@ -5,6 +5,17 @@
     "whatsapp": "5531999291567"
   },
   "programs": [],
-  "downloads": [],
-  "instructions": "Edite este arquivo para cadastrar sistemas e downloads. Para vídeos, edite ../dados/videos.json; para artigos, ../config/home-content.json."
+  "downloads": [
+    {
+      "name": "teste",
+      "category": "Utilitário",
+      "description": "ettste",
+      "url": "https://drive.google.com/file/d/1g00Hnifqd35vHPFTkuYuwkEZNf_rBeOl/view?usp=drivesdk",
+      "version": "1.0",
+      "size": "25",
+      "date": "2026-10-28",
+      "featured": true,
+      "id": "1793193832475"
+    }
+  ]
 }
