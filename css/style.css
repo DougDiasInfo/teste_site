@@ -1,9 +1,9 @@
 :root {
     --orange-primary: #ff6b1a;
     --orange-hover: #ff8c42;
-    --orange-glow: rgba(255, 107, 26, 0.4);
     --green-primary: #25d366;
     --green-hover: #128c7e;
+    --orange-glow: rgba(255, 107, 26, 0.4);
     --bg-dark: #050505;
     --card-bg: rgba(18, 18, 18, 0.75);
     --card-border: rgba(255, 255, 255, 0.08);
@@ -106,7 +106,8 @@ body {
     margin-bottom: 20px;
 }
 
-.hero-glass h1 {
+.hero-glass fg {
+	color: #FFF;
     font-size: 3.2rem;
     font-weight: 800;
     line-height: 1.2;
@@ -114,7 +115,8 @@ body {
     letter-spacing: -1px;
 }
 
-.hero-glass h1 span {
+.hero-glass fg span {
+    font-size: 4rem;
     color: var(--orange-primary);
     text-shadow: 0 0 25px var(--orange-glow);
 }
@@ -166,7 +168,7 @@ body {
 }
 
 .btn-secondary:hover {
-    background: var(--green-hover);
+    background:  var(--green-hover);
     transform: translateY(-3px);
 }
 
