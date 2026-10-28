@@ -326,7 +326,7 @@ body {
     background: rgba(15, 15, 15, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(246, 113, 40, 0.8);
     border-radius: 50px;
     display: flex;
     align-items: center;
