@@ -2,6 +2,8 @@
     --orange-primary: #ff6b1a;
     --orange-hover: #ff8c42;
     --orange-glow: rgba(255, 107, 26, 0.4);
+    --green-hover: rgba(70, 210, 104, 0.5);
+    --green-primary: rgba(70, 210, 104, 1);
     --bg-dark: #050505;
     --card-bg: rgba(18, 18, 18, 0.75);
     --card-border: rgba(255, 255, 255, 0.08);
@@ -158,13 +160,13 @@ body {
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--green-primary);
     color: var(--text-primary);
     border: 1px solid var(--card-border);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--green-hover);
     transform: translateY(-3px);
 }
 
@@ -693,7 +695,7 @@ button{cursor:pointer}
 .btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:0 20px;border-radius:14px;font-weight:800;transition:transform .25s var(--ease),box-shadow .25s}
 .btn:hover{transform:translateY(-3px)}
 .btn-primary{background:var(--orange);box-shadow:0 12px 30px rgba(255,107,26,.22)}
-.btn-secondary{background:rgba(255,255,255,.05);border:1px solid var(--line)}
+/*.btn-secondary{background:rgba(255,255,255,.05);border:1px solid var(--line)}*/
 .cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0 42px}
 .card-item{padding:22px;border:1px solid var(--line);background:var(--surface);border-radius:20px;backdrop-filter:blur(14px);
  transition:transform .3s var(--ease),border-color .3s,box-shadow .3s;min-height:180px}
