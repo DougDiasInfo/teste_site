@@ -368,6 +368,7 @@ body {
 /* SEÇÕES DA HOME */
 .section-container {
     margin-top: 50px;
+    margin-bottom: -90px;
 }
 
 .section-header {
