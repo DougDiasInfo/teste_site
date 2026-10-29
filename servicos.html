@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101116">
+  <meta name="description" content="Serviços de informática, manutenção, formatação, upgrades, segurança e suporte técnico da DM Informática. Consulte valores pelo WhatsApp.">
+  <title>Serviços de Informática</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/menu.css"><link rel="stylesheet" href="css/servicos.css">
+</head>
+<body>
+  <canvas id="particlesCanvas" aria-hidden="true"></canvas>
+  <div class="brand-corner"><a href="index.html" aria-label="DM Informática — página inicial"><img src="img/logo.png" class="logo" alt="DM Informática"></a></div>
+  <nav class="floating-dock" aria-label="Navegação principal">
+    <a href="index.html" class="dock-item active">
+        <i class="fa-solid fa-house"></i>
+        <span class="dock-text">Home</span>
+    </a>
+    <a href="programas.html" class="dock-item">
+        <i class="fa-solid fa-server"></i>
+        <span class="dock-text">Sistemas</span>
+    </a>
+    <a href="downloads.html" class="dock-item">
+        <i class="fa-solid fa-box-archive"></i>
+        <span class="dock-text">Baixar</span>
+    </a>
+    <a href="videos.html" class="dock-item">
+        <i class="fa-solid fa-play"></i>
+        <span class="dock-text">Vídeos</span>
+    </a>
+    <a href="servicos.html" class="dock-item"><i class="fa-solid fa-screwdriver-wrench"></i><span class="dock-text">Serviços</span></a><a href="contato.html" class="dock-item">
+        <i class="fa-solid fa-headset"></i>
+        <span class="dock-text">Suporte</span>
+    </a>
+</nav>
+  <main class="services-page">
+    <section class="services-hero">
+      <span class="services-eyebrow"><i class="fa-solid fa-bolt"></i> DM INFORMÁTICA · SERVIÇOS</span>
+      <h1>Tecnologia funcionando.<br><span>Sem complicação.</span></h1>
+      <p>Manutenção, upgrades, formatação e suporte técnico para seu computador ou notebook. Encontre o serviço ideal e fale direto comigo pelo WhatsApp para confirmar disponibilidade e orçamento.</p>
+      <div class="services-hero-actions"><a class="services-button primary" href="#servicesCatalog"><i class="fa-solid fa-magnifying-glass"></i> Encontrar um serviço</a><a class="services-button secondary" href="https://wa.me/5531999291567?text=Ol%C3%A1%21%20Gostaria%20de%20um%20or%C3%A7amento%20de%20inform%C3%A1tica." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Pedir orçamento</a></div>
+    </section>
+    <section class="services-highlights" aria-label="Diferenciais">
+      <div class="service-highlight"><i class="fa-solid fa-screwdriver-wrench"></i><div><strong>Manutenção e upgrades</strong><span>Cuidados para PC e notebook</span></div></div>
+      <div class="service-highlight"><i class="fa-solid fa-shield-halved"></i><div><strong>Desempenho e segurança</strong><span>Configuração, limpeza e proteção</span></div></div>
+      <div class="service-highlight"><i class="fa-brands fa-whatsapp"></i><div><strong>Contato sem complicação</strong><span>O serviço já vai na mensagem</span></div></div>
+    </section>
+    <section aria-labelledby="shortcutsTitle">
+      <div class="services-section-heading"><div><span class="services-mini-label">Navegue por necessidade</span><h2 id="shortcutsTitle">O que seu equipamento precisa?</h2><p>Escolha uma área para ver os serviços disponíveis.</p></div></div>
+      <div class="services-shortcuts">
+        <button class="service-shortcut" type="button" data-quick-category="Windows e formatação"><i class="fa-brands fa-windows"></i><span>Formatação e programas</span></button>
+        <button class="service-shortcut" type="button" data-quick-category="Manutenção física"><i class="fa-solid fa-fan"></i><span>Limpeza e manutenção</span></button>
+        <button class="service-shortcut" type="button" data-quick-category="Armazenamento e upgrades"><i class="fa-solid fa-hard-drive"></i><span>SSD, HD e memória</span></button>
+        <button class="service-shortcut" type="button" data-quick-category="Suporte técnico"><i class="fa-solid fa-headset"></i><span>Suporte técnico</span></button>
+      </div>
+    </section>
+    <section id="servicesCatalog" aria-labelledby="catalogTitle">
+      <div class="services-section-heading"><div><span class="services-mini-label">Catálogo de serviços</span><h2 id="catalogTitle">Encontre o que precisa</h2><p>Clique em qualquer cartão para consultar o serviço pelo WhatsApp.</p></div></div>
+      <div class="service-filters" id="serviceCategories" aria-label="Filtrar serviços por categoria"></div>
+      <div class="services-toolbar"><label class="services-search"><i class="fa-solid fa-magnifying-glass"></i><input id="servicesSearch" type="search" placeholder="Buscar serviço, peça ou palavra-chave..." aria-label="Pesquisar serviços"></label><select class="services-sort" id="servicesSort" aria-label="Ordenar serviços"><option value="default">Ordenar: padrão</option><option value="asc">Menor preço primeiro</option><option value="desc">Maior preço primeiro</option></select></div>
+      <p class="services-count" id="servicesCount" aria-live="polite">Carregando serviços...</p>
+      <div class="services-grid" id="servicesGrid" aria-live="polite"></div>
+    </section>
+    <aside class="services-disclaimer"><i class="fa-solid fa-circle-info"></i><div><strong>Antes de contratar</strong><p>Os valores exibidos são referências informadas e podem variar conforme diagnóstico, disponibilidade de peças, compatibilidade, deslocamento e demanda de mercado. Licenças de software não estão incluídas, salvo quando indicado. Serviços e peças devem ser confirmados pelo WhatsApp antes da execução ou compra.</p></div></aside>
+    <section class="services-contact"><div><h2>Não encontrou o serviço?</h2><p>Explique o problema do seu equipamento e solicite uma avaliação.</p></div><a class="services-button primary" href="https://wa.me/5531999291567?text=Ol%C3%A1%21%20N%C3%A3o%20encontrei%20o%20servi%C3%A7o%20que%20preciso.%20Gostaria%20de%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Falar com a DM Informática</a></section>
+  </main>
+  <a href="https://wa.me/5531999291567?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20de%20inform%C3%A1tica." class="whatsapp-fab" target="_blank" rel="noopener noreferrer" title="Falar com a DM Informática pelo WhatsApp" aria-label="Falar com a DM Informática pelo WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <script src="js/script.js"></script><script src="js/menu.js"></script><script src="js/servicos.js"></script>
+</body>
+</html>
