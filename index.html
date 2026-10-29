@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DM Informática - HealthTech Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>DM Informática</title>
     
     <!-- Dependências Externas -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
@@ -12,6 +12,31 @@
     <link rel="stylesheet" href="css/micro-matrix.css">
 </head>
 <body>
+    <!-- Canvas de Partículas em Segundo Plano -->
+    <canvas id="particlesCanvas"></canvas>
+
+    <nav class="floating-dock" aria-label="Navegação principal">
+    <a href="index.html" class="dock-item active">
+        <i class="fa-solid fa-house"></i>
+        <span class="dock-text">Home</span>
+    </a>
+    <a href="programas.html" class="dock-item">
+        <i class="fa-solid fa-server"></i>
+        <span class="dock-text">Sistemas</span>
+    </a>
+    <a href="downloads.html" class="dock-item">
+        <i class="fa-solid fa-box-archive"></i>
+        <span class="dock-text">Baixar</span>
+    </a>
+    <a href="videos.html" class="dock-item">
+        <i class="fa-solid fa-play"></i>
+        <span class="dock-text">Vídeos</span>
+    </a>
+    <a href="servicos.html" class="dock-item"><i class="fa-solid fa-screwdriver-wrench"></i><span class="dock-text">Serviços</span></a><a href="contato.html" class="dock-item">
+        <i class="fa-solid fa-headset"></i>
+        <span class="dock-text">Suporte</span>
+    </a>
+</nav>
 
 <!-- SEÇÃO DE BARRA DE IMAGENS EXCLUSIVA PARA DESKTOP -->
 <section class="section-container desktop-only-showcase">
@@ -212,31 +237,6 @@
         
     </div>
 
-    <!-- Navegação em Doca Flutuante -->
-    <nav class="floating-dock">
-        <a href="index.html" class="dock-item active">
-            <i class="fa-solid fa-house"></i>
-            <span class="dock-text">Home</span>
-        </a>
-        <a href="programas.html" class="dock-item">
-            <i class="fa-solid fa-server"></i>
-            <span class="dock-text">Programas</span>
-        </a>
-        <a href="downloads.html" class="dock-item">
-            <i class="fa-solid fa-box-archive"></i>
-            <span class="dock-text">Download</span>
-        </a>
-        <a href="videos.html" class="dock-item">
-            <i class="fa-solid fa-play"></i>
-            <span class="dock-text">Vídeos</span>
-        </a>
-        <a href="contato.html" class="dock-item">
-            <i class="fa-solid fa-headset"></i>
-            <span class="dock-text">Suporte</span>
-        </a>
-    </nav>
-
-    
 <main class="page">
     <!-- Hero Section -->
     <section class="hero-glass">
@@ -255,7 +255,7 @@
 
             
             <div class="hero-actions">
-                <a class="btn btn-primary" href="programas.html"style = "color: black;">
+                <a class="btn btn-primary" href="servicos.html"style = "color: black;">
                     <span>Conheça nossos serviços </span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
