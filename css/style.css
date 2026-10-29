@@ -370,6 +370,9 @@ body {
     margin-top: 50px;
     margin-bottom: -90px;
 }
+.section-container-baixo {
+    margin-top: 50px;
+}
 
 .section-header {
     display: flex;
