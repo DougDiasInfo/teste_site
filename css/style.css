@@ -85,7 +85,7 @@ body {
     border: 1px solid var(--card-border);
     backdrop-filter: blur(16px);
     border-radius: 28px;
-    padding: 60px 20px;
+    padding: 60px 40px;
     text-align: center;
     margin-bottom: 50px;
     position: relative;
@@ -103,7 +103,7 @@ body {
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .hero-glass fg {
@@ -111,8 +111,8 @@ body {
     font-size: 3.2rem;
     font-weight: 800;
     line-height: 1.2;
-    margin-bottom: 10px;
-    letter-spacing: -3.5px;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
 }
 
 .hero-glass fg span {
@@ -340,7 +340,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #a0a0a0;
+    color: #fff;
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 30px;
@@ -622,7 +622,7 @@ html, body {
 
 /* RESPONSIVO MOBILE - Esconde o texto e deixa só ícones */
 @media (max-width: 768px) {
-    .dock-text { display: none; }
+    .dock-text { display: none;}
     .dock-item { padding: 12px 18px; }
     .floating-dock { bottom: 15px; width: 90%; justify-content: space-around; }
 }
