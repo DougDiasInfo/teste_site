@@ -323,7 +323,7 @@ body {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(15, 15, 15, 0.85);
+    background: rgba(246, 113, 40, 0.2);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(246, 113, 40, 0.8);
@@ -333,7 +333,7 @@ body {
     padding: 8px 12px;
     gap: 5px;
     z-index: 999;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 10px 40px rgba(246, 113, 40, 0.6);
 }
 
 .dock-item {
@@ -355,7 +355,7 @@ body {
 
 .dock-item:hover {
     color: #ffffff;
-    background: rgba(246, 113, 40, 0.5);
+    background: rgba(246, 113, 40, 0.4);
 }
 
 .dock-item.active {
