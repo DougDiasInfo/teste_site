@@ -1,7 +1,7 @@
 # Como atualizar o conteúdo do site
 
 ## Pelo painel visual
-1. Abra `content-admin.html` no site publicado ou localmente por um servidor HTTP.
+1. Abra `admin.html` no site publicado ou localmente por um servidor HTTP.
 2. Escolha Vídeos, Artigos, Programas, Downloads ou Serviços.
 3. Clique em **Adicionar**, preencha os campos e salve. Para alterar um item existente, use o lápis.
 4. Clique em **Baixar JSON**.
@@ -29,4 +29,4 @@ Não abra os HTML por `file://`, pois o navegador pode bloquear `fetch()` dos ar
 - `css/servicos.css`: estilos responsivos e identidade visual da página.
 - `js/servicos.js`: catálogo, filtros, busca, ordenação e mensagens do WhatsApp.
 
-Para alterar serviços ou preços, selecione **Serviços** no painel `content-admin.html`, use o lápis para editar ou **Adicionar** para incluir um novo serviço e clique em **Baixar config/services.json**. Substitua esse arquivo no repositório e faça commit. Cada cartão abre uma conversa no WhatsApp com o nome do serviço e o preço de referência. Confirme os valores antes de publicar; valores de peças podem variar por estoque e compatibilidade.
+Para alterar serviços ou preços, selecione **Serviços** no painel `admin.html`, use o lápis para editar ou **Adicionar** para incluir um novo serviço e clique em **Baixar config/services.json**. Substitua esse arquivo no repositório e faça commit. Cada cartão abre uma conversa no WhatsApp com o nome do serviço e o preço de referência. Confirme os valores antes de publicar; valores de peças podem variar por estoque e compatibilidade.
